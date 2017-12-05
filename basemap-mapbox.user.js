@@ -73,7 +73,7 @@ function wrapper(plugin_info) {
     },
   };
 
-  var setup = window.plugin.mapTileMapBoxi.addLayer;
+  var setup = window.plugin.mapTileMapBox.addLayer;
 
   // PLUGIN END //////////////////////////////////////////////////////////
 
