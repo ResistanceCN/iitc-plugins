@@ -6,6 +6,10 @@ Some IITC plugins developed by our community.
 
 Add the MapBox map tiles as an optional layer.
 
+### Install
+
+Install [tampermonkey](http://tampermonkey.net/) at first, then [Click here!](https://github.com/ResistanceCN/iitc-plugins/raw/master/basemap-mapbox.user.js)
+
 ### Basic usage
 
 Before you can use this plugin, you must register an account at https://www.mapbox.com to get your own access token.
