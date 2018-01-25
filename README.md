@@ -24,3 +24,16 @@ Go to https://www.mapbox.com/studio/ and design your custom map styles. After pu
 
 You can only use styles that accessible with your access token, generally, those owned by your mapbox account.
 
+## polygon-portals2json.js
+
+Modified from https://github.com/hayeswise/iitc-portalsinpolygons
+
+### Install
+
+You need [portal-list](https://static.iitc.me/build/release/plugins/portals-list.user.js) first.
+
+Then [this](https://raw.githubusercontent.com/ResistanceCN/iitc-plugins/master/polygon-portals2json.js).
+
+### Basic usage
+
+Draw a polygon on the map and then use `Output as Json` to obtain a json style string.
