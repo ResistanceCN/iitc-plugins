@@ -167,18 +167,28 @@ function wrapper(plugin_info) {
     var gcn = new L.GCJ02TileLayer('https://{s}.google.cn/maps/vt?lyrs=m@189&gl=cn&scale=' + ratio + '&x={x}&y={y}&z={z}', {
       subdomains: ['www', 'mt0', 'mt1', 'mt2', 'mt3'],
       attribution: 'Map data © Google Maps',
-      maxNativeZoom: 18,
+      maxNativeZoom: 21,
       maxZoom: 21,
     });
     layerChooser.addBaseLayer(gcn, 'Google 地图 (中国)');
 
-    var amap = new L.GCJ02TileLayer('https://webrd0{s}.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scl=' + ratio + '&style=8&x={x}&y={y}&z={z}', {
+    var amap = new L.GCJ02TileLayer('https://webrd0{s}.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scl=1&style=8&x={x}&y={y}&z={z}', {
       subdomains: '1234',
       attribution: 'Map data © 高德地图',
       maxNativeZoom: 18,
       maxZoom: 21,
     });
     layerChooser.addBaseLayer(amap, '高德地图');
+
+    if (ratio == '2') {
+      var amap2 = new L.GCJ02TileLayer('https://webrd0{s}.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scl=2&style=8&x={x}&y={y}&z={z}', {
+        subdomains: '1234',
+        attribution: 'Map data © 高德地图',
+        maxNativeZoom: 18,
+        maxZoom: 21,
+      });
+      layerChooser.addBaseLayer(amap2, '高德地图 (2x 无绘标)');
+    }
 
     var tencent = new L.TencentLayer({
       attribution: 'Map data © 腾讯地图',
