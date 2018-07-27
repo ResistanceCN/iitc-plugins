@@ -45,9 +45,6 @@ function wrapper(plugin_info) {
   // use own namespace for plugin
   window.plugin.mapTileMapBox = {
     addLayer: function() {
-      // OpenStreetMap tiles - we shouldn't use these by default - https://wiki.openstreetmap.org/wiki/Tile_usage_policy
-      // "Heavy use (e.g. distributing an app that uses tiles from openstreetmap.org) is forbidden without prior permission from the System Administrators"
-
       var osmOpt = {
         attribution: 'Map data © MapBox',
         maxNativeZoom: 18,

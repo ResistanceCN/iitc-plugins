@@ -40,15 +40,15 @@ function wrapper(plugin_info) {
   var ee = 0.00669342162296594323;
 
   function out_of_china(lng, lat) {
-    var lat = +lat;
-    var lng = +lng;
-    // 纬度3.86~53.55,经度73.66~135.05 
+    lat = +lat;
+    lng = +lng;
+    // 纬度 3.86~53.55, 经度 73.66~135.05
     return !(lng > 73.66 && lng < 135.05 && lat > 3.86 && lat < 53.55);
   };
 
   function transformlat(lng, lat) {
-    var lat = +lat;
-    var lng = +lng;
+    lat = +lat;
+    lng = +lng;
     var ret = -100.0 + 2.0 * lng + 3.0 * lat + 0.2 * lat * lat + 0.1 * lng * lat + 0.2 * Math.sqrt(Math.abs(lng));
     ret += (20.0 * Math.sin(6.0 * lng * PI) + 20.0 * Math.sin(2.0 * lng * PI)) * 2.0 / 3.0;
     ret += (20.0 * Math.sin(lat * PI) + 40.0 * Math.sin(lat / 3.0 * PI)) * 2.0 / 3.0;
@@ -57,8 +57,8 @@ function wrapper(plugin_info) {
   };
 
   function transformlng(lng, lat) {
-    var lat = +lat;
-    var lng = +lng;
+    lat = +lat;
+    lng = +lng;
     var ret = 300.0 + lng + 2.0 * lat + 0.1 * lng * lng + 0.1 * lng * lat + 0.1 * Math.sqrt(Math.abs(lng));
     ret += (20.0 * Math.sin(6.0 * lng * PI) + 20.0 * Math.sin(2.0 * lng * PI)) * 2.0 / 3.0;
     ret += (20.0 * Math.sin(lng * PI) + 40.0 * Math.sin(lng / 3.0 * PI)) * 2.0 / 3.0;
@@ -67,8 +67,8 @@ function wrapper(plugin_info) {
   };
   
   function gcj02towgs84(lng, lat) {
-    var lat = +lat;
-    var lng = +lng;
+    lat = +lat;
+    lng = +lng;
     if (out_of_china(lng, lat)) {
       return [lng, lat]
     } else {
@@ -117,14 +117,14 @@ function wrapper(plugin_info) {
       var wgs84 = gcj02towgs84(latLng.lng, latLng.lat);
       var wgs84Point = this._map.latLngToLayerPoint(new L.LatLng(wgs84[1], wgs84[0]));
 
-      var bounds = L.bounds(
+      bounds = L.bounds(
         bounds.min.subtract(wgs84Point.subtract(point)),
         bounds.max.subtract(wgs84Point.subtract(point))
       );
 
       var tileBounds = L.bounds(
-        bounds.min.divideBy(tileSize)._floor(),
-        bounds.max.divideBy(tileSize)._floor()
+        bounds.min.divideBy(tileSize)._round(),
+        bounds.max.divideBy(tileSize)._round()
       );
 
       this._addTilesFromCenterOut(tileBounds);
