@@ -38,9 +38,10 @@ var setup = function() {
 
     button.innerText = '刷';
     button.onclick = function() {
-        window.mapDataRequest.setStatus('refreshing', undefined, -1);
-        // window.mapDataRequest.refreshOnTimeout(window.mapDataRequest.MOVE_REFRESH);
-        window.mapDataRequest.refreshOnTimeout(0);
+        idleReset();
+        window.mapDataRequest.cache = new DataCache();
+        window.mapDataRequest.refresh();
+        window.mapDataRequest.processRequestQueue();
     };
 
     toolbar.appendChild(button);
