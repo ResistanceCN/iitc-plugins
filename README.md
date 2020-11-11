@@ -6,15 +6,16 @@ Some IITC plugins developed by our community.
 
 **All plugins need to be pre-installed with tampermonkey and iitc.**
 
-- tampermonkey: https://tampermonkey.net/
+- Tampermonkey: [Download](https://tampermonkey.net/)
 
     You can also install the extension from your browser store.
 
-- iitc: https://iitc.me
+- IITC: [Download](https://iitc.me)
 
     Google Play: [IITC Mobile (Community Edition)](https://play.google.com/store/apps/details?id=org.exarhteam.iitc_mobile) | [IITC Mobile](https://play.google.com/store/apps/details?id=com.cradle.iitc_mobile)
 
     Itunes: [iitc-mobile](https://itunes.apple.com/us/app/iitc-mobile/id1032695947)
+
 ---
 
 ## Map Tiles
@@ -26,7 +27,6 @@ Some IITC plugins developed by our community.
 - Install
 
     [**Download Here**](https://github.com/ResistanceCN/iitc-plugins/raw/master/basemap-china.user.js)
-
 
 - Basic usage
 
@@ -42,7 +42,7 @@ Some IITC plugins developed by our community.
 
 - Basic usage
 
-    Before you can use this plugin, you must register an account at https://www.mapbox.com to get your own access token.
+    Before you can use this plugin, you must register an account at [MapBox](https://www.mapbox.com) to get your own access token.
 
     After added [basemap-mapbox.user.js](basemap-mapbox.user.js) to Tampermonkey, edit it and replace `mapBoxUserName` and `mapBoxAccessToken` with your username and access token of Mapbox.
 
@@ -50,7 +50,7 @@ Some IITC plugins developed by our community.
 
 - Custom map styles
 
-    Go to https://www.mapbox.com/studio/ and design your custom map styles. After publishing them, set your style id and layer name in `mapStyles` object.
+    Go to [MapBox](https://www.mapbox.com/studio/) and design your custom map styles. After publishing them, set your style id and layer name in `mapStyles` object.
 
     You can only use styles that accessible with your access token, generally, those owned by your mapbox account.
 
@@ -82,9 +82,9 @@ Some IITC plugins developed by our community.
     Reload portal and link information.
 
 - Install
-    
+  
     [**Download Here**](https://github.com/ResistanceCN/iitc-plugins/raw/master/force-refresh.user.js)
 
 - Basic usage
 
-    Click the refresh button. 
+    Click the refresh button.
