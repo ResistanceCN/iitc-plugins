@@ -14,7 +14,7 @@ Some IITC plugins developed by our community.
 
     Google Play: [IITC Mobile (Community Edition)](https://play.google.com/store/apps/details?id=org.exarhteam.iitc_mobile) | [IITC Mobile](https://play.google.com/store/apps/details?id=com.cradle.iitc_mobile)
 
-    Itunes: [iitc-mobile](https://itunes.apple.com/us/app/iitc-mobile/id1032695947)
+    iTunes: [iitc-mobile](https://itunes.apple.com/us/app/iitc-mobile/id1032695947)
 
 ---
 
@@ -88,3 +88,17 @@ Some IITC plugins developed by our community.
 - Basic usage
 
     Click the refresh button.
+
+## Layer
+
+### 1. group-drawn-items-by-color
+
+    Only show drawn items matching the color in the palette from the storage.
+
+- Install
+
+    [**Download Here**](https://github.com/FroskyArr/my-iitc-plugins/raw/main/group-drawn-items-by-color.js)
+
+- Basic usage
+
+    > Toolbox -> DrawTools Enhancement Opt.
